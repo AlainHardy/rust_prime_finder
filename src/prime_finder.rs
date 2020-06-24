@@ -1,6 +1,10 @@
 pub fn compute_for(value: u32) -> Vec<u32> {
+  compute_from_to(1, value + 1)
+}
+
+pub fn compute_from_to(down_limit: u32, upper_limit: u32) -> Vec<u32> {
   let mut ret: Vec<u32> = Vec::new();
-  for number in 1..=value {
+  for number in down_limit..upper_limit {
     if is_prime(number) {
       ret.push(number);
     }
